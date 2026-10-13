@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-base: #0c0d11;
+    --bg-surface: #12141a;
+    --bg-surface-elevated: #181b22;
+    --border-dim: #232733;
+    --border-accent: #f59e0b;
+    --amber-core: #f59e0b;
+    --amber-bright: #fbbf24;
+    --amber-deep: #b45309;
+    --text-primary: #f8fafc;
+    --text-secondary: #94a3b8;
+    --text-dim: #64748b;
+  }
+
+  body {
+    background-color: var(--bg-base);
+    color: var(--text-primary);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    letter-spacing: -0.01em;
+    overflow-x: hidden;
+  }
+}
+
+/* Industrial dot matrix subtle backdrop */
+.bg-grid-amber {
+  background-size: 24px 24px;
+  background-image: 
+    radial-gradient(circle, rgba(245, 158, 11, 0.08) 1px, transparent 1px);
+}
+
+/* Hazard stripe pattern for caution/offline badges */
+.bg-hazard-stripes {
+  background: repeating-linear-gradient(
+    -45deg,
+    rgba(245, 158, 11, 0.15),
+    rgba(245, 158, 11, 0.15) 8px,
+    rgba(18, 20, 26, 0.8) 8px,
+    rgba(18, 20, 26, 0.8) 16px
+  );
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #0c0d11;
+}
+::-webkit-scrollbar-thumb {
+  background: #2a2e3d;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #f59e0b;
+}
+
+/* Custom glow utility */
+.glow-amber-sm {
+  box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+.glow-amber-md {
+  box-shadow: 0 0 24px rgba(245, 158, 11, 0.35);
+}
